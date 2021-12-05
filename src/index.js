@@ -27,11 +27,11 @@ function renderCountryCard(countries) {
     const markup = countries
         .map(({ name,capital,population,flags,languages }) => {
             return `<li>
-      <img scr="${flags}" alt="${name.official}">
-          <h2 class="post-title">${name.official}</h2>
-          <p><b>Post id</b>: ${capital}</p>
-          <p><b>Author id</b>: ${population}</p>
-          <p class="post-body">${languages}</p>
+      <img scr=${flags.svg} width="200px" height="100px" alt="${name.official}">
+          <h2 class="name">${name.official}</h2>
+          <p><b>capital</b>: ${capital}</p>
+          <p><b>population</b>: ${population}</p>
+          <p class="languages"><b>languages</b>:${languages}</p>
         </li>`;
     })
     .join("");
